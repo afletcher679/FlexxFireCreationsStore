@@ -1,0 +1,7 @@
+.DS_Store
+/frontend/flexx-fire-creations/.env
+/frontend/flexx-fire-creations/node_modules/
+
+# React Router
+/frontend/flexx-fire-creations/.react-router/
+/frontend/flexx-fire-creations/build/
