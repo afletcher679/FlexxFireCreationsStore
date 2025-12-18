@@ -1,3 +1,4 @@
+import Header from "~/components/header";
 import type { Route } from "./+types/catalog";
 import { useQuery } from "@tanstack/react-query";
 
@@ -21,7 +22,7 @@ export default function Catalog() {
 
   return (
     <>
-    <h1>This is the Catalog page</h1>
+    <Header />
       <ul>
         {(data ?? []).map((creation) => (
         <li key={creation.id}>{creation.id} - {creation.name}</li>
