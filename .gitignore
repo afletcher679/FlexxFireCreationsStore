@@ -5,3 +5,19 @@
 # React Router
 /frontend/flexx-fire-creations/.react-router/
 /frontend/flexx-fire-creations/build/
+
+
+# Python
+# Backend — Python artifacts
+/backend/django_backend/db.sqlite3
+/backend/django_backend/.env
+/backend/django_backend/.pytest_cache/
+/backend/django_backend/.vscode/
+
+# Ignore __pycache__ and compiled Python files anywhere under django_backend
+/backend/django_backend/**/__pycache__/
+/backend/django_backend/**/*.pyc
+/backend/django_backend/creations/__pycache__/
+/backend/django_backend/creations/*.pyc
+/backend/django_backend/creations/migrations/__pycache__/
+/backend/django_backend/creations/migrations/*.pyc
