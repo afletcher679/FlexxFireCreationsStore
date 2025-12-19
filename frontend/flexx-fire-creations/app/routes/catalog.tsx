@@ -2,11 +2,6 @@ import Header from "~/components/header";
 import type { Route } from "./+types/catalog";
 import { useQuery } from "@tanstack/react-query";
 
-type Creation = {
-  id: number;
-  name: string;
-};
-
 export default function Catalog() {
     const { data, isLoading, isError } = useQuery<Creation[]>({
     queryKey: ["creations"],
