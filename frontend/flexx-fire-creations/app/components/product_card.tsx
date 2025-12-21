@@ -10,7 +10,7 @@ export default function ProductCard({ creation }: { creation: Creation }) {
             <img className="w-full h-40 object-cover rounded-sm" src={creation.image} alt={creation.name} />
             <div className="p-2 flex-1">
                 <h2 className="text-xl font-bold mb-2">{creation.name}</h2>
-                <p className="text-lg font-semibold">${creation.price}</p>
+                <p className="text-lg font-semibold text-orange-400">${creation.price}</p>
             </div>
             <button className="bg-orange-500 w-full">
                 <div className="flex items-center content-center justify-center p-2">
