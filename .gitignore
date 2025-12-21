@@ -19,6 +19,7 @@
 /backend/django_backend/**/__pycache__/
 /backend/django_backend/**/*.pyc
 /backend/django_backend/creations/__pycache__/
+/backend/django_backend/creations/__pycache__/*.pyc
 /backend/django_backend/creations/*.pyc
 /backend/django_backend/creations/migrations/__pycache__/
 /backend/django_backend/creations/migrations/*.pyc
