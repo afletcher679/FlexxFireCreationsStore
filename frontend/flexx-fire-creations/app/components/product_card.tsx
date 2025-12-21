@@ -1,3 +1,4 @@
+import { IoCartOutline } from 'react-icons/io5';
 export default function ProductCard({ creation }: { creation: Creation }) {
     return (
         <div className="flex flex-col 
@@ -11,7 +12,14 @@ export default function ProductCard({ creation }: { creation: Creation }) {
                 <h2 className="text-xl font-bold mb-2">{creation.name}</h2>
                 <p className="text-lg font-semibold">${creation.price}</p>
             </div>
-            <button className="bg-orange-500 w-full">Add To Cart</button>
+            <button className="bg-orange-500 w-full">
+                <div className="flex items-center content-center justify-center p-2">
+                    <div className="me-2">
+                        <IoCartOutline size={24}/>
+                    </div>
+                    Add To Cart
+                </div>
+            </button>
         </div>
     );
 }
