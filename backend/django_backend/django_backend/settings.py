@@ -10,7 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
 from pathlib import Path
+import cloudinary
+from dotenv import load_dotenv
+
+load_dotenv()
+
+cloudinary.config( 
+    cloudinary_url=os.environ.get("CLOUDINARY_URL")
+)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,7 +50,18 @@ INSTALLED_APPS = [
     'creations',
     'rest_framework',
     'corsheaders',
+    "cloudinary",
+    "cloudinary_storage",
 ]
+
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
 
 MIDDLEWARE = [
      "corsheaders.middleware.CorsMiddleware",

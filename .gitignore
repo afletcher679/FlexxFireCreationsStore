@@ -1,7 +1,6 @@
 .DS_Store
-/frontend/flexx-fire-creations/.env
 /frontend/flexx-fire-creations/node_modules/
-
+/backend/django_backend/node_modules/
 # React Router
 /frontend/flexx-fire-creations/.react-router/
 /frontend/flexx-fire-creations/build/
@@ -16,6 +15,7 @@
 
 # Ignore __pycache__ and compiled Python files anywhere under django_backend
 /backend/django_backend/__pycache__/
+/backend/django_backend/django_backend/__pycache__/
 /backend/django_backend/**/__pycache__/
 /backend/django_backend/**/*.pyc
 /backend/django_backend/creations/__pycache__/
