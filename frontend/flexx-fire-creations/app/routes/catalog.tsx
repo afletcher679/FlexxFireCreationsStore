@@ -2,7 +2,7 @@ import Header from "~/components/header";
 import type { Route } from "./+types/catalog";
 import { useQuery } from "@tanstack/react-query";
 import ProductCard from "~/components/product_card";
-
+import { Link } from "react-router";
 import type { Creation } from '~/creation';
 
 export default function Catalog() {
@@ -25,7 +25,11 @@ export default function Catalog() {
     <Header />
       <ul className="flex flex-row">
         {(data ?? []).map((creation) => (
-        <li key={creation.id} className="m-4"><ProductCard creation={creation} /></li>
+          <li key={creation.id} className="m-4">
+            <Link to={`creations/${creation.id}`}>
+              <ProductCard creation={creation} />
+            </Link>
+          </li>
       ))}
     </ul>
     </>
