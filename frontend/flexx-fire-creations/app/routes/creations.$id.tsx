@@ -29,15 +29,25 @@ export default function Product_Details(){
     return(
       <>
         <Header/>
-        <div className="flex gap-4 ms-2 mt-2">
+        <div className="flex gap-4 ms-2 mt-2 h-1/3 h-full">
           <div className="w-1/2">
           <Product_Image_Gallery creation={creation}/>
           </div>
 
-          <div className="w-1/2">
-            <h1>{creation.name}</h1>
+          <div className="w-1/2 flex flex-col gap-2 mx-2">
+            <h1 className="text-2xl text-orange-500 font-zalando">{creation.name}</h1>
+            <p className="text-semibold">${creation.price}</p>
+            <div className="flex gap-2 w-1/4">
+              <button className="bg-orange-200 rounded-md text-black w-1/4">-</button>
+              <input className="border-solid border border-gray-300 rounded-md p-1 text-center w-1/2" type="number" value="1"/>
+              <button className="bg-orange-200 rounded-md text-black w-1/4">+</button>
+            </div>
+            <div>
+              <button className="bg-orange-500 text-white p-2 w-full rounded-md">Add to Cart</button>
+            </div>
+            
+
             <p>{creation.description}</p>
-            <p>{creation.price}</p>
           </div>
         </div>
       </>
