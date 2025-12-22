@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     "cloudinary",
     "cloudinary_storage",
     'creations',
-    'gallery_image'
+    'gallery_image',
+    'color'
 ]
 
 STORAGES = {
