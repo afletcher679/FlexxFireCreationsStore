@@ -1,6 +1,7 @@
 import Product_Image_Gallery from "../components/product_image_gallery";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router";
+import Header from "~/components/header";
 import type { Creation } from '~/creation';
 
 export async function fetchCreation(id: string) {
@@ -26,6 +27,20 @@ export default function Product_Details(){
   if (isError || !creation) return <p>Error loading product</p>;
 
     return(
-        <Product_Image_Gallery creation={creation}/>
+      <>
+        <Header/>
+        <div className="flex gap-4 ms-2 mt-2">
+          <div className="w-1/2">
+          <Product_Image_Gallery creation={creation}/>
+          </div>
+
+          <div className="w-1/2">
+            <h1>{creation.name}</h1>
+            <p>{creation.description}</p>
+            <p>{creation.price}</p>
+          </div>
+        </div>
+      </>
+    
     )
 }
