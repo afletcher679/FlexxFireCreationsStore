@@ -5,6 +5,7 @@ from creations.models import Creation
 class GalleryImage(models.Model):
     creation = models.ForeignKey(Creation, related_name='gallery_images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='gallery/')
+    featured = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.creation.name} image {self.id}"
