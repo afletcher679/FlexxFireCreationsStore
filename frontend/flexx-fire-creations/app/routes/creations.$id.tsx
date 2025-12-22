@@ -26,8 +26,6 @@ export default function Product_Details(){
   if (isError || !creation) return <p>Error loading product</p>;
 
     return(
-        <h1>{creation.name}</h1>
-        
-       // <Product_Image_Gallery creation={creation}/>
+        <Product_Image_Gallery creation={creation}/>
     )
 }
