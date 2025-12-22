@@ -1,8 +1,12 @@
-type Creation = {
+export interface GalleryImage {
+  id: number;
+  image: string;
+}
+export interface Creation {
   id: number;
   name: string;
   description: string;
   price: number;
-  image: string;
+  gallery_images: GalleryImage[];
   created_at: string;
 };

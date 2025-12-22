@@ -1,4 +1,6 @@
 import { IoCartOutline } from 'react-icons/io5';
+import type { Creation } from '~/creation';
+
 export default function ProductCard({ creation }: { creation: Creation }) {
     return (
         <div className="flex flex-col 
@@ -19,7 +21,7 @@ export default function ProductCard({ creation }: { creation: Creation }) {
                     </div>
                     Add To Cart
                 </div>
-            </button>
+            </button>          
         </div>
     );
 }

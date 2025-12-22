@@ -3,6 +3,7 @@ import type { Route } from "./+types/catalog";
 import { useQuery } from "@tanstack/react-query";
 import ProductCard from "~/components/product_card";
 
+import type { Creation } from '~/creation';
 
 export default function Catalog() {
     const { data, isLoading, isError } = useQuery<Creation[]>({
