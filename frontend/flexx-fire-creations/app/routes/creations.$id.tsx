@@ -2,6 +2,7 @@ import Product_Image_Gallery from "../components/product_image_gallery";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router";
 import Header from "~/components/header";
+import CreationOrderForm from "~/components/product_order_form";
 import type { Creation } from '~/creation';
 
 export async function fetchCreation(id: string) {
@@ -35,19 +36,7 @@ export default function Product_Details(){
           </div>
 
           <div className="w-1/2 flex flex-col gap-2 mx-2">
-            <h1 className="text-2xl text-orange-500 font-zalando">{creation.name}</h1>
-            <p className="text-semibold">${creation.price}</p>
-            <div className="flex gap-2 w-1/4">
-              <button className="bg-orange-200 rounded-md text-black w-1/4">-</button>
-              <input className="border-solid border border-gray-300 rounded-md p-1 text-center w-1/2" type="number" value="1"/>
-              <button className="bg-orange-200 rounded-md text-black w-1/4">+</button>
-            </div>
-            <div>
-              <button className="bg-orange-500 text-white p-2 w-full rounded-md">Add to Cart</button>
-            </div>
-            
-
-            <p>{creation.description}</p>
+            <CreationOrderForm creation={creation}/>
           </div>
         </div>
       </>
