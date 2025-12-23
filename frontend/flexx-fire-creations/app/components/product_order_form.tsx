@@ -7,7 +7,7 @@ const quantityButtonStyle = "bg-orange-200 rounded-md text-black w-1/4 bg-orange
 export default function CreationOrderForm({creation} : {creation: Creation}) {
     const [quantity, setQuantity] = useState(1);
     return (
-        <>
+        <div className="flex flex-col gap-4">
             <h1 className="text-2xl text-orange-500 font-zalando">{creation.name}</h1>
                 <p className="text-semibold text-xl">${creation.price}</p>
 
@@ -30,6 +30,6 @@ export default function CreationOrderForm({creation} : {creation: Creation}) {
                 <button className="bg-orange-500 text-white p-2 w-full rounded-md active:bg-orange-700 cursor-pointer">Add to Cart</button>
 
                 <p>{creation.description}</p>
-        </>
+        </div>
     )
 }
