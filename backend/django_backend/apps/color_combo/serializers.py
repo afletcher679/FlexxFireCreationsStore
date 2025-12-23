@@ -1,15 +1,13 @@
 from .models import ColorCombo
-from apps.color.models import Color
+from apps.color.serializers import ColorSerializer
 from rest_framework import serializers
 
 class ColorComboSerializer(serializers.ModelSerializer):
-    colors = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Color.objects.all()
-    )
+    colors = ColorSerializer(many=True, read_only=True)
 
     class Meta:
         model = ColorCombo
-        fields = ["id", "name", "colors"]
+        fields = '__all__'
 
     def validate_colors(self, value):
         if len(value) != 2:
