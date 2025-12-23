@@ -1,6 +1,7 @@
 from django.db import models
 
 from apps.color.models import Color
+from apps.color_combo.models import ColorCombo
 
 # Create your models here.
 class Creation(models.Model):
@@ -9,6 +10,7 @@ class Creation(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='creations/images/', blank=True, null=True)
     colors = models.ManyToManyField(Color, related_name='creations', blank=True)
+    color_combos = models.ManyToManyField(ColorCombo, related_name='creations', blank=True)   
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
