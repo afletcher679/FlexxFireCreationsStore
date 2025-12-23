@@ -4,6 +4,11 @@ export interface Color {
   hex_code: string;
 }
 
+export interface ColorCombo {
+  id: number;
+  colors: Color[];
+}
+
 export interface GalleryImage {
   id: number;
   image: string;
@@ -16,5 +21,6 @@ export interface Creation {
   price: number;
   gallery_images: GalleryImage[];
   colors: Color[];
+  color_combos: ColorCombo[];
   created_at: string;
 };
