@@ -1,9 +1,9 @@
 import { useState } from "react";
 import type { Creation, GalleryImage } from '~/creation';
+import DefaultImage from '../default_featured_image';
 
 export default function Product_Image_Gallery({ creation } : { creation : Creation}){ 
-    const defaultImage: GalleryImage = { id: 1, image: "/coming_soon_flame.jpg", featured: true };
-    const images = creation.gallery_images.length ? creation.gallery_images : [defaultImage];
+    const images = creation.gallery_images.length ? creation.gallery_images : [DefaultImage];
     const featuredImage = images.find( x => x.featured === true) || images[0];
     
     const [imageIndex, setImageIndex] = useState(images.indexOf(featuredImage));
