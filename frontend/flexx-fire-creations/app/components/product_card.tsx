@@ -7,7 +7,7 @@ export default function ProductCard({ creation }: { creation: Creation }) {
         <div className="flex flex-col 
         min-w-48 max-w-48 w-full 
         min-h-80 max-h-80 h-full
-        border-3 border-solid border-orange-500 rounded-lg 
+        border-3 border-solid border-orange-400 rounded-lg 
         hover:shadow-lg/40 shadow-orange-400 cursor-pointer 
         hover:-translate-y-1">
             <img className="w-full h-40 object-cover rounded-sm" src={creation.gallery_images.length ? creation.gallery_images.find(x => x.featured === true)?.image || creation.gallery_images[0]?.image : DefaultImage.image} alt={creation.name} />
@@ -15,7 +15,7 @@ export default function ProductCard({ creation }: { creation: Creation }) {
                 <h2 className="text-xl font-bold mb-2">{creation.name}</h2>
                 <p className="text-lg font-semibold text-orange-400">${creation.price}</p>
             </div>
-            <button className="bg-orange-500 w-full">
+            <button className="bg-orange-400 w-full">
                 <div className="flex items-center content-center justify-center p-2">
                     <div className="me-2">
                         <IoCartOutline size={24}/>
