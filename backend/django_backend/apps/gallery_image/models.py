@@ -1,5 +1,5 @@
 from django.db import models
-from creations.models import Creation
+from apps.creations.models import Creation
 
 # Create your models here.
 class GalleryImage(models.Model):

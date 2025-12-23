@@ -1,6 +1,6 @@
 from django.db import models
 
-from color.models import Color
+from apps.color.models import Color
 
 # Create your models here.
 class Creation(models.Model):

@@ -51,9 +51,9 @@ INSTALLED_APPS = [
     'corsheaders',
     "cloudinary",
     "cloudinary_storage",
-    'creations',
-    'gallery_image',
-    'color'
+    'apps.creations',
+    'apps.gallery_image',
+    'apps.color'
 ]
 
 STORAGES = {

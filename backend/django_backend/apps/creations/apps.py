@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class CreationsConfig(AppConfig):
-    name = 'creations'
+    name = 'apps.creations'

@@ -1,5 +1,5 @@
-from gallery_image.serializers import GalleryImageSerializer
-from color.serializers import ColorSerializer
+from apps.gallery_image.serializers import GalleryImageSerializer
+from apps.color.serializers import ColorSerializer
 from rest_framework import serializers
 from .models import Creation
 
