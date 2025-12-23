@@ -12,12 +12,9 @@ export default function Product_Image_Gallery({ creation } : { creation : Creati
 
     const remainingImages = images.filter((_, index) => index !== imageIndex);
     return(
-        <div className="flex flex-col gap-4 w-full">
-            {/* Selected image */}
-            <img src={selectedImage.image} alt={`${creation.name} image ${imageIndex}`} className="w-full object-cover rounded-lg aspect-square"/>
-
+        <div className="flex gap-2 w-full h-full">
             {/* Thumbnails */}
-            <div className="flex gap-2 w-full overflow-hidden">
+            <div className="flex flex-col gap-2 overflow-hidden w-1/4">
                 {images.length > 1 && remainingImages.map((gallery_image: GalleryImage, index: number) => (
                     <button
                         key={gallery_image.id}
@@ -30,12 +27,12 @@ export default function Product_Image_Gallery({ creation } : { creation : Creati
                                 src={gallery_image.image}
                                 alt={`${creation.name} image ${index}`}
                                 className={"w-full object-cover cursor-pointer aspect-square rounded-md"}
-                        
                             />
                         </button>
-                    
                 ))}
             </div>
+            {/* Selected image */}
+            <img src={selectedImage.image} alt={`${creation.name} image ${imageIndex}`} className="w-3/4 w-full object-cover rounded-lg aspect-square overflow-hidden"/>
         </div>
     )
 }
