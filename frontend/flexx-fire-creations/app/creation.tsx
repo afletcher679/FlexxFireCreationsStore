@@ -12,6 +12,7 @@ export interface ColorCombo {
 export interface GalleryImage {
   id: number;
   image: string;
+  featured: boolean;
 }
 
 export interface Creation {
