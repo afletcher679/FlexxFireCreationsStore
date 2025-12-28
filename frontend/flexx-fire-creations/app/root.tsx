@@ -11,6 +11,8 @@ import type { Route } from "./+types/root";
 import "./app.css";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Header from "./components/header";
+import Footer from "./components/footer";
 const queryClient = new QueryClient();
 
 export const links: Route.LinksFunction = () => [
@@ -37,11 +39,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className="flex flex-col min-h-screen">
+        <Header/>
+
+        <div className="flex-1">
+          {children}
+        </div>
+        
+        <Footer/>
         <ScrollRestoration />
         <Scripts />
       </body>
+
     </html>
   );
 }
