@@ -14,3 +14,15 @@ body {
     color-scheme: dark;
   }
 }
+
+.hr-orange {
+    @apply w-full bg-orange-500 border-0 h-px my-2;
+}
+
+.btn-orange-full {
+    @apply bg-orange-500 text-white p-2 w-full rounded-md active:bg-orange-700 cursor-pointer;
+}
+
+.btn-orange-qtr {
+    @apply bg-orange-500 text-white p-2 w-1/4 rounded-lg active:bg-orange-700 cursor-pointer;
+}
