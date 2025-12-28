@@ -18,7 +18,8 @@ export interface GalleryImage {
 export interface Creation {
   id: number;
   name: string;
-  description: string;
+  mini_description: string;
+  full_description: string;
   price: number;
   gallery_images: GalleryImage[];
   colors: Color[];
