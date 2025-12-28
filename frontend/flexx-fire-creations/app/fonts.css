@@ -1,0 +1,13 @@
+.font-zalando-semibold {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-zalando-medium {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
