@@ -1,6 +1,7 @@
 import Product_Image_Gallery from "../components/product_image_gallery";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router";
+import CreationDetailedInformation from "~/components/creation_detailed_information";
 import Header from "~/components/header";
 import CreationOrderForm from "~/components/product_order_form";
 import type { Creation } from '~/creation';
@@ -30,14 +31,17 @@ export default function Product_Details(){
     return(
       <>
         <Header/>
-        <div className="flex gap-4 ms-2 mt-2 h-1/3 h-full">
-          <div className="w-1/2">
-          <Product_Image_Gallery creation={creation}/>
-          </div>
+        <div className="mx-4 mt-2">
+          <div className="flex gap-4 h-1/3 h-full">
+            <div className="w-2/3">
+            <Product_Image_Gallery creation={creation}/>
+            </div>
 
-          <div className="w-1/2 flex flex-col gap-2 mx-2">
-            <CreationOrderForm creation={creation}/>
+            <div className="w-1/3 flex flex-col h-1/3 h-full gap-2 ms-2">
+              <CreationOrderForm creation={creation}/>
+            </div>
           </div>
+          <CreationDetailedInformation creationDescription={creation.full_description}/>
         </div>
       </>
     
