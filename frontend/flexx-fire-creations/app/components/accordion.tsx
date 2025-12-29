@@ -3,7 +3,7 @@ import { SlArrowUp, SlArrowDown } from "react-icons/sl";
 
 function AccordionHeader({ title, isOpen, onClick } : { title: string; isOpen: boolean; onClick: () => void;}) {
     return (
-        <button className= "flex w-full justify-between my-2 text-lg font-zalando" onClick={onClick}>
+        <button className= "flex w-full justify-between my-2 text-lg font-zalando text-orange-500" onClick={onClick}>
             {title}
         
             {isOpen ? <SlArrowUp /> : <SlArrowDown />}

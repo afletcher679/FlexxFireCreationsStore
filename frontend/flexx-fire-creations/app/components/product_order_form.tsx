@@ -29,7 +29,7 @@ export default function CreationOrderForm({creation} : {creation: Creation}) {
                 <button className={quantityButtonStyle} onClick={() => setQuantity(prev => prev + 1)}>+</button>
                 </div>
 
-                <button className="btn-orange">Add to Cart</button>  
+                <button className="btn-orange-full">Add to Cart</button>  
         </div>
     )
 }

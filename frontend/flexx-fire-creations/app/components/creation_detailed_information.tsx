@@ -6,7 +6,7 @@ import Purchase_AddOns from "./purchase_add_ons";
 export default function CreationDetailedInformation({ creationDescription } : { creationDescription: string }) {
     return (
         <>
-            <h1 className="text-2xl font-bold my-4 font-zalando-medium">Detailed Information</h1>
+            <h1 className="text-2xl font-bold my-4 font-zalando-medium text-orange-500">Detailed Information</h1>
             <hr className="hr-orange" />
             <Accordion title="Description" content={creationDescription} defaultOpen={true} />
             <hr className="hr-orange" />

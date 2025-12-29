@@ -3,7 +3,7 @@ function AddonItem({title, price}: {title: string, price: number}) {
     return (
         <div className="flex justify-between items-center my-3">
             <div className="flex flex-col">
-                <h2 className="flex-1">{title}</h2>
+                <h2 className="flex-1 text-orange-500">{title}</h2>
                 <p>${price}</p>
             </div>
             <button className="btn-orange-qtr">Add</button>
