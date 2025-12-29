@@ -30,12 +30,12 @@ export default function Product_Details(){
     return(
       <>
         <div className="mx-4 mt-2">
-          <div className="flex gap-4 h-1/3 h-full">
-            <div className="w-2/3">
+          <div className="flex gap-4 h-[50vh] min-h-0">
+            <div className="w-1/2">
             <Product_Image_Gallery creation={creation}/>
             </div>
 
-            <div className="w-1/3 flex flex-col h-1/3 h-full gap-2 ms-2">
+            <div className="w-1/2 flex flex-col ms-2">
               <CreationOrderForm creation={creation}/>
             </div>
           </div>
